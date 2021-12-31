@@ -7,7 +7,7 @@ def preprocess(df: pd.DataFrame):
     return execute_pipeline(
         inspect_data_size,
         data_availbaility_check,
-        histogram('age'),
+        histogram('age', title = 'Age distribution'),
         categorize_age,
         encode('age'),
         normalize('age'),
