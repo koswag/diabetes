@@ -7,7 +7,7 @@ Transform = Callable[[pd.DataFrame], pd.DataFrame]
 
 
 def execute_pipeline(*transforms: Transform):
-    def _pipeline(initial: pd.DataFrame):
+    def _pipeline(*, initial: pd.DataFrame):
         df = initial
         for transform in transforms:
             df = transform(df)
